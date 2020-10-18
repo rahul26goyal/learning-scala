@@ -30,6 +30,20 @@ object SimpleSyntax {
     }
   }
 
+  class AuxiliaryConstructor(val a : String, val b : Int) {
+    println("Primary Constructor called...")
+    private var name : String = a
+    private var age: Int = b
+    def this(name : String){
+      this(name, 20)
+      println("Auxiliary Constructor called...")
+    }
+
+    def display(): Unit = {
+      println("AUX USER:" + name + ":" + age)
+    }
+  }
+
   def run(): Unit ={
     println("Running Simple Class syntax...")
     var ec = new EmptyClass();
@@ -62,5 +76,10 @@ object SimpleSyntax {
     println(u6.printerName())
 
     //Auxilary Constructor.
+    var aux = new AuxiliaryConstructor("Rahul")
+    aux.display()
+    // below will not call aux constructor.
+    aux = new AuxiliaryConstructor("Rahul", 22)
+    aux.display()
   }
 }
