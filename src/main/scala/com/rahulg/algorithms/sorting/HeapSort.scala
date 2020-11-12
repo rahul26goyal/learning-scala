@@ -14,7 +14,7 @@ object HeapSort {
   }
 
   /**
-   * Used MAx Heap tto Sort the elements on the given array.
+   * Used MAx Heap to Sort the elements on the given array.
    * @param arr
    */
   def sort(arr : Array[Int]): Unit = {
