@@ -12,7 +12,7 @@ object ConnectNodeAtLevel {
                   5                  20
               1      8          15           25
            0                                         50
-   */
+   **/
 
   def main(args: Array[String]): Unit = {
     val tree = new TreeNodeWithParent(10);

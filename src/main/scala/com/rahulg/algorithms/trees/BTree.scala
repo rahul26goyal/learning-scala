@@ -70,8 +70,15 @@ object BTree {
 
   /**
    * Creates a BST with 10 at root.
-   * @tparam A
+   * @tparam
    * @return
+
+  /**
+                          10
+                  5                  20
+              1      8          15           25
+           0                                         50
+   **/
    */
   def createDefaultTree(): BTreeNode[Int] = {
     val tree = new BTreeNode[Int](10);
@@ -80,6 +87,7 @@ object BTree {
 
     tree.leftChild.leftChild = new BTreeNode[Int](1);
     tree.leftChild.rightChild = new BTreeNode[Int](8);
+    tree.leftChild.leftChild.leftChild = new BTreeNode[Int](0);
 
     tree.rightChild.leftChild = new BTreeNode[Int](15);
     tree.rightChild.rightChild = new BTreeNode[Int](25);

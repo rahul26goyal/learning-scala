@@ -11,6 +11,18 @@ object HashMapExample {
     addEntries(hashMap)
 
     printMap(hashMap)
+
+    checkKeys(hashMap)
+  }
+
+  def checkKeys(hashMap: mutable.HashMap[Int, String]): Unit = {
+    println("Check Keys...")
+    val value = hashMap.get(1)
+    println(s"Value: ${value.get}")
+
+    val value2 = hashMap.get(11)
+    println(s"Value: ${value2 == None}")
+
   }
 
   def addEntries(hashMap: mutable.HashMap[Int, String]): Unit = {
@@ -34,6 +46,13 @@ object HashMapExample {
 
     hashMap.foreach(printFunc)
 
+    println("Printing using iterator...")
+
+    val it = hashMap.iterator
+    while(it.hasNext) {
+      val x = it.next()
+      println(s"data: ${x._1} => ${x._2}")
+    }
   }
 
 

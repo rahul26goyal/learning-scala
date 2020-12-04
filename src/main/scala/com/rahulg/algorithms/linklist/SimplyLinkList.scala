@@ -90,7 +90,7 @@ object SimplyLinkList {
   def main(args: Array[String]): Unit = {
     val sl = new SimplyLinkList[Int]()
 
-    printLink(s1)
+    printLink(sl)
   }
 
   def printLink(sl: SimplyLinkList[Int]): Unit = {

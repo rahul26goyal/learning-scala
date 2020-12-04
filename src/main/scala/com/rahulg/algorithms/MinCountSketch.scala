@@ -4,7 +4,7 @@ import com.rahulg.algorithms.MinCountSketch.{hashFunctionCount, hashPrimePairs}
 import com.rahulg.collections.Utils
 /**
  * A Data Structure for Min Count Sketch Implementtion.
- *
+ * One can also refer: https://gist.github.com/VarunVats9/7f379199d7658b96d479ee3c945f1b4a
  * @param maxSize
  */
 class MinCountSketch[A](val maxSize: Int) {
@@ -13,7 +13,7 @@ class MinCountSketch[A](val maxSize: Int) {
   private val sketch = Array.ofDim[Int](hashFunctionCount, maxSize)
 
   def printSketch(): Unit = {
-    println("Prinign the Sketch table.....")
+    println("Printing the Sketch table.....")
     Utils.print2DArray(sketch)
   }
 
