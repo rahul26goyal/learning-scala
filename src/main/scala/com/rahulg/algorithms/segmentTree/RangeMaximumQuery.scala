@@ -1,5 +1,8 @@
 package com.rahulg.algorithms.segmentTree
 
+/**
+ * https://www.geeksforgeeks.org/segment-tree-set-2-range-maximum-query-node-update/?ref=rp
+ */
 object RangeMaximumQuery {
   def main(args: Array[String]): Unit = {
     val input = Array(1,2,3,4,5,6,7)
